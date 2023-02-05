@@ -19,10 +19,10 @@ int main() {
     LogElement elementMassiv(1,massiv);
     cout<<"ADD CLEAT\n";
     //elementMassiv.addCleat();
-    elementMassiv.minusCountOfCon(1);
-    elementMassiv.outputMass();
-    elementMassiv.plusCountOfCon(1);
-    elementMassiv.outputMass();
+    elementMassiv-(1);
+    cout<<elementMassiv;
+    elementMassiv+(1);
+    cout<<elementMassiv;
 //    elementOnlySize.addCleat();
 //    elementOnlySize.outputMass();
     return 0;

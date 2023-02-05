@@ -32,17 +32,23 @@ public:
 
     LogElement(int, char **);
 
+    virtual ~LogElement();
+
+    LogElement(LogElement&);
+
+    LogElement(LogElement&&) noexcept ;
+
     static LogElement::WritingCleat *redefine(WritingCleat *, int);
 
-    void outputMass() const;
+    friend ostream& operator<<(ostream&, LogElement&);
 
     static LogElement::WritingCleat *redefineOneElement(WritingCleat *, int /*размер*/, int /*номер клемы*/);
 
     void outputStatusCleat(int);
 
-    void plusCountOfCon(int) const;
+    void operator+(int) const;
 
-    void minusCountOfCon(int) const;
+    void operator-(int) const;
 
     LogElement::WritingCleat* addCleat();
 };
